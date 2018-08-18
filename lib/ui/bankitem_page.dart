@@ -34,6 +34,19 @@ class BankListItem extends StatelessWidget {
                  amount: bank.processing_fee),
             subCard(
                 type: "Tenure", pinColor: Colors.green, amount: bank.tenure),
+            SizedBox(height: 30.0,),
+            RaisedButton(
+                padding: const EdgeInsets.symmetric(horizontal: 36.0,vertical: 0.0),
+                color:  Color.fromRGBO(95, 212, 104, 1.0),
+                elevation: 4.0,
+                child: new Text("Apply",style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20.0,
+                ),),
+                onPressed: (){},
+                shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0))
+            )
             //Tenure Card
           ],
         ));
@@ -46,9 +59,9 @@ class BankListItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(16.0)),
         margin: new EdgeInsets.all(8.0),
         child: Container(
-          constraints: BoxConstraints.expand(height: 160.0),
+          constraints: BoxConstraints.expand(height: 180.0),
           padding: EdgeInsets.all(16.0),
-          height: 160.0,
+          height: 180.0,
           decoration: BoxDecoration(
             gradient: bank.gradientcolor,
           ),

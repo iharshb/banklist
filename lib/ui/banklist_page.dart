@@ -76,10 +76,10 @@ class _BankListPageState extends State<BankListPage> {
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
             margin: new EdgeInsets.all(8.0),
             child: Container(
-              constraints: BoxConstraints.expand(height: 160.0),
+              constraints: BoxConstraints.expand(height: 165.0),
               padding: EdgeInsets.all(16.0),
               decoration: BoxDecoration(gradient: bankLists[index].gradientcolor,),
-              height: 100.0,
+              height: 165.0,
               child: Container(
 
                 child: Stack(
