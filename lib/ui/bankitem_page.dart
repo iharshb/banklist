@@ -11,38 +11,29 @@ class BankListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(bank.name),
-        ),
+        appBar: AppBar(title: Text(bank.name),),
         body: Column(
           children: <Widget>[
-            Container(
-                child: bankCard()
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
 
+            Container(child: bankCard()),
+            SizedBox(height: 20.0,),
+            //EMI card Widget
             subCard(type: "EMI", pinColor: Colors.pinkAccent, amount: bank.emi),
-            subCard(
-                type: "Interest Rate",
-                pinColor: Colors.blue,
-                amount: bank.intrestRate),
-            subCard(
-                type: "Processing Fee",
-                pinColor: Colors.deepOrange,
-                 amount: bank.processing_fee),
-            subCard(
-                type: "Tenure", pinColor: Colors.green, amount: bank.tenure),
+            //Interest Rate card Widget
+            subCard(type: "Interest Rate", pinColor: Colors.blue, amount: bank.intrestRate),
+            //Processing Fee card Widget
+            subCard(type: "Processing Fee", pinColor: Colors.deepOrange, amount: bank.processing_fee),
+            //Tenure card Widget
+            subCard(type: "Tenure", pinColor: Colors.green, amount: bank.tenure),
             SizedBox(height: 30.0,),
+
+            //Apply Button
             RaisedButton(
                 padding: const EdgeInsets.symmetric(horizontal: 36.0,vertical: 0.0),
                 color:  Color.fromRGBO(95, 212, 104, 1.0),
                 elevation: 4.0,
                 child: new Text("Apply",style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20.0,
+                  color: Colors.white, fontWeight: FontWeight.w400, fontSize: 20.0,
                 ),),
                 onPressed: (){},
                 shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0))
@@ -69,14 +60,9 @@ class BankListItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(bank.name, style: TextStyles.bankTitle),
-              SizedBox(
-                height: 50.0,
-              ),
-              Text("Loan Amount",
-                  style: TextStyles.loanAmountTitle),
-              SizedBox(
-                height: 10.0,
-              ),
+              SizedBox(height: 50.0,),
+              Text("Loan Amount", style: TextStyles.loanAmountTitle),
+              SizedBox(height: 10.0,),
               Text(bank.loanAmount, style: TextStyles.bankTitle),
             ],
           ),
@@ -98,28 +84,21 @@ class BankListItem extends StatelessWidget {
               flex: 3,
               child: Row(
                 children: <Widget>[
-                  CircleAvatar(
-                    radius: 12.0,
-                    backgroundColor: pinColor,
-                  ),
-                  SizedBox(
-                    width: 16.0,
-                  ),
-                  Text(type,
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 18.0)),
+
+                  CircleAvatar(radius: 12.0, backgroundColor: pinColor,),
+                  SizedBox(width: 16.0,),
+                  Text(type, style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 18.0)),
                 ],
               ),
             ),
 
             new Expanded(
               flex: 1,
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: Text(amount,
-                    style: TextStyle(
+              child: Align(alignment: Alignment.centerRight,
+                child: Text(amount, style: TextStyle(
                         color: Colors.blueGrey.shade700,
                         fontWeight: FontWeight.w800,
                         fontSize: 20.0)),

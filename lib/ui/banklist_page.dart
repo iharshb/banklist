@@ -86,7 +86,7 @@ class _BankListPageState extends State<BankListPage> {
                   alignment:AlignmentDirectional.center ,
                   children: <Widget>[
 
-                    //This Widget is for Bank Title (Top Start)
+                    //This Widget is for Bank Title, LoanAmount Title and Loan Amount
                     Align(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,21 +112,16 @@ class _BankListPageState extends State<BankListPage> {
                           elevation: 4.0,
                           child: new Text("Apply",style: TextStyles.applyButton,),
                           onPressed: (){
-
+                            //Navigate to BankDetail Screen
                             Navigator.push(context, new MaterialPageRoute(
                                 builder: (BuildContext context) =>  BankListItem(bankLists[index]),
                             ));
-
-                          },
+                            },
                           shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(8.0))
                       ),
                       alignment: AlignmentDirectional.bottomEnd,
                     ),
-
-                    //This Widget is for LoanAmount Title and Loan Amount (Bottom Start)
-
                   ],
-
                 ),
               ),
             ),
