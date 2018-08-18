@@ -8,7 +8,7 @@ Building a Bank Listing UI Demo inspired by design in Flutter.
 * Johnson Kattamkottil's Design - [https://www.uplabs.com/posts/bank-list](https://www.uplabs.com/posts/bank-list) 
 
 ## Screenshots
-<img src="ss_bankcard_list.jpg" height="400em" /> <img src="ss_bank_item.jpg" height="400em" />
+<img src="ss_bankcard_list.jpg" height="500em" /> <img src="ss_bank_item.jpg" height="500em" />
 
 
 ## Created By
